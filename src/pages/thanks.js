@@ -9,7 +9,7 @@ const SecondPage = () => (
     <SEO title="Thanks for your order!" />
     <h1>Thanks for your order!</h1>
     <p>Your order <b>#34013</b> has been placed. You will receive an email with your receipt all the shipping details.</p>
-    <Link to="https://tromerogarcia-1.pinterdev.com/nicegoodstuffm19/">Go back to the store</Link>
+    <a href="https://tromerogarcia-1.pinterdev.com/nicegoodstuffm19/">Go back to the store</a>
   </Layout>
 )
 
