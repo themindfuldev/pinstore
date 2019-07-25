@@ -6,9 +6,10 @@ import SEO from "../components/seo"
 import { checkout } from "../checkout"
 
 const IndexPage = () => {
-  const sku = document.location.search.match(/(?:sku=)(.*)/)[1];
-
-  checkout(sku);
+  if (global.document) {
+    const sku = global.document.location.search.match(/(?:sku=)(.*)/)[1];
+    checkout(sku);
+  }
   return (
     <Layout>
       <SEO title="Checkout" />
