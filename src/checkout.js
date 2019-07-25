@@ -5,8 +5,8 @@ export async function checkout(sku) {
 
     const { error } = await stripe.redirectToCheckout({
         items: [{ sku, quantity: 1 }],
-        successUrl: `http://localhost:8000/thanks/`,
-        cancelUrl: `http://localhost:8000/`,
+        successUrl: `https://jolly-brattain-ec4665.netlify.com/thanks/`,
+        cancelUrl: `https://jolly-brattain-ec4665.netlify.com/`,
         billingAddressCollection: 'required',
     })
     if (error) {
