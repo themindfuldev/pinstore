@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -6,10 +6,15 @@ import SEO from "../components/seo"
 import { checkout } from "../checkout"
 
 const IndexPage = () => {
-  if (global.document) {
-    const sku = global.document.location.search.match(/(?:sku=)(.*)/)[1];
-    checkout(sku);
-  }
+  useEffect(() => {
+    if (window.document) {
+      const param = window.document.location.search.match(/(?:sku=)(.*)/);
+      if (param) {
+        checkout(param[1]);
+      }
+    }
+  });
+
   return (
     <Layout>
       <SEO title="Checkout" />
